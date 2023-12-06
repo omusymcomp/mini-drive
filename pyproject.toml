@@ -3,7 +3,7 @@ requires = ["setuptools", "wheel", "RPi.GPIO"]
 
 [project]
 name        =   "minidrive"
-version     =   "0.01"
+version     =   "0.0.2"
 authors     =   [
     { name="Sugi Kentaro", email="sd23080r@omu.ac.jp" },
 ]
