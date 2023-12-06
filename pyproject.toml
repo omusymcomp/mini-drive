@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools", "wheel", "RPi.GPIO"]
+
+[project]
+name        =   "minidrive"
+version     =   "0.01"
+authors     =   [
+    { name="Sugi Kentaro", email="sd23080r@omu.ac.jp" },
+]
+description =   "Tools for driving Mini4WD with RaspberryPi"
+readme =        "README.md"
+requires-python=">=3.9"
+classifiers =   [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Topic :: System :: Hardware"
+]
