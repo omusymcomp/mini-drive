@@ -12,14 +12,16 @@ for i in [IN1, IN2, NSLP]:
     GPIO.output(i, GPIO.LOW)
 pi = GPIO.PWM(IN1, 100)
 pi.start(0)
-GPIO.output(NSLP, 1)
+GPIO.output(NSLP, GPIO.HIGH)
 
 #Duty比の変更
 def set_duty(rate):
     pi.ChangeDutyCycle(rate)
 
-def short(): 
-    print("short_brake")
+#ショートブレーキ
+def brake(): 
+    GPIO.output(IN1, GPIO.LOW)
+    GPIO.output(IN2, GPIO.LOW)
 
 def cleanup():
     GPIO.cleanup()
