@@ -18,7 +18,7 @@ GPIO.output(NSLP, GPIO.HIGH)
 def set_duty(rate):
     pi.ChangeDutyCycle(rate)
 
-#ショートブレーキ
+#ショートブレーキ(あまり効果ないかも)
 def brake(): 
     GPIO.output(IN1, GPIO.LOW)
     GPIO.output(IN2, GPIO.LOW)
