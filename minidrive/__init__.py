@@ -1,6 +1,6 @@
 from .drive import (
     set_duty,
-    short,
+    brake,
     cleanup,
 )
 from .data import (
