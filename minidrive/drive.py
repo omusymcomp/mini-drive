@@ -10,7 +10,7 @@ GPIO.setmode(GPIO.BCM)
 for i in [IN1, IN2, NSLP]:
     GPIO.setup(i, GPIO.OUT)
     GPIO.output(i, GPIO.LOW)
-pi = GPIO.PWM(IN1, 100)
+pi = GPIO.PWM(IN1, 5000)    #5kHzでpwm制御
 pi.start(0)
 GPIO.output(NSLP, GPIO.HIGH)
 
