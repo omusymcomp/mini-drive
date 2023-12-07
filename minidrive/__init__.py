@@ -1,5 +1,4 @@
 from .drive import (
-    initialize,
     set_duty,
     short,
     cleanup,
