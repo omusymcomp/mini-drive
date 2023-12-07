@@ -2,6 +2,7 @@ from .drive import (
     set_duty,
     brake,
     cleanup,
+    sleep,
 )
 from .data import (
     acc_x,
