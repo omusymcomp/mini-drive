@@ -23,5 +23,12 @@ def brake():
     GPIO.output(IN1, GPIO.LOW)
     GPIO.output(IN2, GPIO.LOW)
 
+#モーターへの出力を入れたり切ったり
+def sleep(l=True):
+    if l:
+        GPIO.output(NSLP, GPIO.LOW)
+    else:
+        GPIO.output(NSLP, GPIO.HIGH)
+
 def cleanup():
     GPIO.cleanup()
