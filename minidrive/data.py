@@ -1,3 +1,7 @@
+import RPi.GPIO as GPIO
+from . import D1,D2,D3,D4
+
+
 def acc_x():
     print('acc x')
 
@@ -48,3 +52,18 @@ def A4():
 
 def A5():
     print('analog 5')
+
+def LED_out(flag:bool, No:int):
+    if not (type(No) is int):
+        raise Exception('Only integer type is allowed for variable No.')
+    elif not (type(flag) is bool):
+        raise Exception('Only boolian type is allowed for variable flag.')
+    if No < 1 or 4 < No:
+        raise Exception('Please enter value 1,2,3 or 4 for No.')
+
+    list = [D1,D2,D3,D4]
+    No = No - 1
+    if flag:
+    	GPIO.output(list[No], GPIO.HIGH)
+    else:
+        GPIO.output(list[No], GPIO.LOW)
