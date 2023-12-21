@@ -1,4 +1,5 @@
 import RPi.GPIO as GPIO
+from . import pi,IN1,IN2,NSLP
 
 #Duty比の変更
 def set_duty(rate):
