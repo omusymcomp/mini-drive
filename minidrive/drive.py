@@ -7,8 +7,8 @@ def set_duty(rate):
 
 #フルパワーで固定
 def set_full():
-    GPIO.output(IN1, GPIO.LOW)
-    GPIO.output(IN2, GPIO.HIGH)
+    GPIO.output(IN1, GPIO.HIGH)
+    GPIO.output(IN2, GPIO.LOW)
 
 #ショートブレーキ(あまり効果ないかも)
 def brake(): 
