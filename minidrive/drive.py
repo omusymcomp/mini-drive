@@ -5,6 +5,11 @@ from . import pi,IN1,IN2,NSLP
 def set_duty(rate):
     pi.ChangeDutyCycle(rate)
 
+#フルパワーで固定
+def set_full():
+    GPIO.output(IN1, GPIO.LOW)
+    GPIO.output(IN2, GPIO.HIGH)
+
 #ショートブレーキ(あまり効果ないかも)
 def brake(): 
     GPIO.output(IN1, GPIO.LOW)
