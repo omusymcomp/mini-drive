@@ -32,9 +32,46 @@ def led(no, flag):
  else:
   GPIO.output(no, GPIO.LOW)
 
+import pygame
 
-led(D3, True)
-time.sleep(2)
+f,w = True, True
+while w:
+ try:
+  led(D3, True)
+  pygame.init()
+  pygame.joystick.init()
+  joystick = pygame.joystick.Joystick(0)
+  joystick.init()
+  break
+ except Exception as e:
+  print("Controller not conected...")
+  GPIO.cleanup()
+  exit()
+
+w = True
+noLB = 5
+noRB = 4
+
+while w:
+ print('waiting...')
+ for event in pygame.event.get():
+  if joystick.get_button(0):
+   print('connected')
+   w = False
+ if f:
+  led(D3, True)
+  f = False
+ else:
+  led(D3, False)
+  f = True
+ time.sleep(0.5)
+print('connected!!!')
+led(D3, False)
+led(D2, True)
+time.sleep(0.5)
+led(D2, False)
+
+
 GPIO.cleanup()
 
 
