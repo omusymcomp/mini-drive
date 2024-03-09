@@ -33,7 +33,7 @@ def led(no, flag):
 
 acc()
 time.sleep(2)
-
+GPIO.cleanup()
 
 
 
