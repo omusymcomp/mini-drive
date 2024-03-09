@@ -4,8 +4,10 @@ import time
 IN1 = 13
 IN2 = 0
 NSLP = 12
+D1 = 17
 D2 = 27
 D3 = 22
+D4 = 23
 
 GPIO.setmode(GPIO.BCM)
 for i in [IN1, IN2, NSLP, D2, D3]:
@@ -31,7 +33,7 @@ def led(no, flag):
   GPIO.output(no, GPIO.LOW)
 
 
-acc()
+led(D3, True)
 time.sleep(2)
 GPIO.cleanup()
 
