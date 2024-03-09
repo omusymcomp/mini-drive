@@ -25,6 +25,7 @@ def slp():
 def bk():
  GPIO.output(IN1, GPIO.LOW)
  GPIO.output(IN2, GPIO.LOW)
+ GPIO.output(NSLP, GPIO.HIGH)
 
 def led(no, flag):
  if flag:
