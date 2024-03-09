@@ -22,7 +22,7 @@ def acc():
 def slp():
  GPIO.output(NSLP, GPIO.LOW)
 
-def beake():
+def bk():
  GPIO.output(IN1, GPIO.LOW)
  GPIO.output(IN2, GPIO.LOW)
 
@@ -53,7 +53,7 @@ noLB = 5
 noRB = 4
 
 while w:
- print('waiting...')
+ print('Push A button.')
  for event in pygame.event.get():
   if joystick.get_button(0):
    print('connected')
@@ -72,6 +72,19 @@ time.sleep(0.5)
 led(D2, False)
 
 
+while True:
+ for event in pygame.event.get():
+  if joystick.get_button(6):  #LB pushed
+   bk()
+   led(D3, True)
+  elif joystick.get_button(7):
+   acc()
+   led(D2, True)
+  else:
+   slp()
+   led(D3, False)
+   led(D2, False)
+   
 GPIO.cleanup()
 
 
