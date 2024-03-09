@@ -77,10 +77,10 @@ while True:
   if joystick.get_button(6):  #LB pushed
    bk()
    led(D3, True)
-  elif joystick.get_button(7):
+  if joystick.get_button(7):
    acc()
    led(D2, True)
-  else:
+  if not joystick.get_button(6) and not joystick.get_button(7):
    slp()
    led(D3, False)
    led(D2, False)
