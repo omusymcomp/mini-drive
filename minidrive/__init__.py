@@ -16,8 +16,7 @@ GPIO.setmode(GPIO.BCM)
 for i in list:
     GPIO.setup(i, GPIO.OUT)
     GPIO.output(i, GPIO.LOW)
-pwm0 = GPIO.PWM(PWM, 1000)    #1kHzでpwm制御
-pwm0.start(0)
+
 pwm1 = GPIO.PWM(NSLP, 1000)    #1kHzでpwm制御
 pwm1.start(0)
 GPIO.output(NSLP, GPIO.HIGH)
