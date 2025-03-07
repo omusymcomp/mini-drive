@@ -22,10 +22,12 @@ drive.set_duty(int rate)
 
 ### brake
  ```
-drive.brake( void )
+drive.brake( True )
  ```
 モータ回路をショートさせてブレーキをかける関数．
-効果は薄め．引数と戻り値はともにない．
+Trueによってブレーキが作動し，Falseによって解除する．
+最後にTrueでブレーキをかけた後にset_dutyを実行してもタイヤは回らない．
+引数と戻り値はともにない．
 
 
 ### sleep
