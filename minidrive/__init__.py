@@ -19,7 +19,7 @@ for i in list:
 
 pwm1 = GPIO.PWM(NSLP, 1000)    #1kHzでpwm制御
 pwm1.start(0)
-GPIO.output(NSLP, GPIO.HIGH)
+GPIO.output(PWM, GPIO.HIGH)
 
 
 from .drive import (
