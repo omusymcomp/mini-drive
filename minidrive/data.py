@@ -1,5 +1,5 @@
 import RPi.GPIO as GPIO
-from . import D1,D2,D3,D4
+from . import LED1,LED2,LED3,LED4
 
 
 def acc_x():
