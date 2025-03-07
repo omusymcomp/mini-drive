@@ -22,7 +22,7 @@ drive.set_duty(int rate)
 
 ### brake
  ```
-drive.brake( True )
+drive.brake(bool True)
  ```
 モータ回路をショートさせてブレーキをかける関数．
 Trueによってブレーキが作動し，Falseによって解除する．
@@ -32,10 +32,11 @@ Trueによってブレーキが作動し，Falseによって解除する．
 
 ### sleep
  ```
-drive.sleep(bool l = True)
+drive.sleep(bool True)
  ```
 モータへの出力を入れるか切るかを設定する関数．
 Trueならばモータ電源が切れて，Falseならばモータ電源が入る．
+brake関数と異なり，出力が切れるのみでタイヤの動きを止めるような効果はない．
 
 | \ | 変数名 | 値の範囲 | 説明 |
 | ---- | ---- | ---- | ---- |
