@@ -6,7 +6,7 @@ RPi.GPIO = "^0.7.1"
 
 [project]
 name        =   "minidrive"
-version     =   "0.0.9"
+version     =   "0.1.0"
 authors     =   [
     { name="Sugi Kentaro", email="sd23080r@omu.ac.jp" },
 ]
@@ -18,4 +18,7 @@ classifiers =   [
     "License :: OSI Approved :: MIT License",
     "Operating System :: POSIX :: Linux",
     "Topic :: System :: Hardware"
+]
+dependencies = [
+    "RPi.GPIO"
 ]
