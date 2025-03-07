@@ -6,8 +6,11 @@ def set_duty(rate):
     pwm1.ChangeDutyCycle(rate)
 
 #ショートブレーキ(あまり効果ないかも)
-def brake(): 
-    GPIO.output(PWM, GPIO.LOW)
+def brake(flag=True):
+    if flag:
+        GPIO.output(MOTD, GPIO.LOW)
+    else:
+        GPIO.output(MOTD, GPIO.HIGH) 
 
 #モーターへの出力を入れたり切ったり
 def sleep(l=True):
