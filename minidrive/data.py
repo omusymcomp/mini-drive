@@ -61,9 +61,9 @@ def LED_out(flag:bool, No:int):
     if No < 1 or 4 < No:
         raise Exception('Please enter value 1,2,3 or 4 for No.')
 
-    list = [D1,D2,D3,D4]
+    list = [LED1,LED2,LED3,LED4]
     No = No - 1
     if flag:
-    	GPIO.output(list[No], GPIO.HIGH)
+        GPIO.output(list[No], GPIO.HIGH)
     else:
         GPIO.output(list[No], GPIO.LOW)

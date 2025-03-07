@@ -1,5 +1,5 @@
 import RPi.GPIO as GPIO
-from . import pi,IN1,IN2,NSLP
+from . import pi,MOTD,PWM,NSLP
 
 #Duty比の変更
 def set_duty(rate):
@@ -7,8 +7,7 @@ def set_duty(rate):
 
 #ショートブレーキ(あまり効果ないかも)
 def brake(): 
-    GPIO.output(IN1, GPIO.LOW)
-    GPIO.output(IN2, GPIO.LOW)
+    GPIO.output(PWM, GPIO.LOW)
 
 #モーターへの出力を入れたり切ったり
 def sleep(l=True):
