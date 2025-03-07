@@ -1,9 +1,9 @@
 import RPi.GPIO as GPIO
-from . import pi,MOTD,PWM,NSLP
+from . import pwm0,pwm1,MOTD,PWM,NSLP
 
 #Duty比の変更
 def set_duty(rate):
-    pi.ChangeDutyCycle(rate)
+    pwm1.ChangeDutyCycle(rate)
 
 #ショートブレーキ(あまり効果ないかも)
 def brake(): 
