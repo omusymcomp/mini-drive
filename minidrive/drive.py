@@ -16,9 +16,9 @@ def set_duty(rate):
 #ショートブレーキ(あまり効果ないかも)
 def brake(flag=True):
     if flag:
-        GPIO.output(MOTD, GPIO.LOW)
+        GPIO.output(PWM, GPIO.LOW)
     else:
-        GPIO.output(MOTD, GPIO.HIGH) 
+        GPIO.output(PWM, GPIO.HIGH) 
 
 #モーターへの出力を入れたり切ったり
 def sleep(l=True):
